@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet library="css" name="main.css"/>
+    <h:outputStylesheet library="css" name="style_index.css"/>
+    <title>WebService</title>
+</h:head>
+<h:body>
+    <style type="text/css">
+        TD, TH {
+            padding: 3px; /* Поля вокруг содержимого таблицы */
+            border: 1px solid white; /* Параметры рамки */
+            text-align: left; /* Выравнивание по левому краю */
+        }
+    </style>
+    <div class="main">
+        <div class="content">
+            <p class="title"><span class="text"><img src="resources/image/lib.png" width="76" height="77" hspace="10"
+                                                     vspace="10"
+                                                     align="middle" alt="logo"></img></span></p>
+
+            <p class="title">Proceed and sales structure report</p>
+
+            <p class="text" align="center">
+                <a href="http://www.t-systems.ru/career/java-school/1037760">
+                    Java-school project, T-Systems</a></p>
+            
+
+
+            <h:form id="form1">
+
+                <div class="login_div">
+
+                    <p:panelGrid style="border: 2px hidden white; " columns="2">
+                        <p:outputLabel for="start" value="Start date:"/>
+                        <p:calendar id="start" value="#{reportingBean.startDate}" required="true"/>
+
+                        <p:outputLabel for="end" value="End date:"/>
+                        <p:calendar id="end" value="#{reportingBean.endDate}" required="true"/>
+                    </p:panelGrid>
+
+                    <p>&nbsp;</p>
+                </div>
+
+                <!--<div class="login_div">-->
+                <center>
+                    <p:panelGrid style="border: 2px solid white;" columns="1">
+
+                        <h:commandButton id="pdf" value="Get pdf report"
+                                         action="#{reportingBean.createProceedReport}"
+                                         styleClass="btn"/>
+                    </p:panelGrid>
+                </center>
+
+
+            </h:form>
+
+        </div>
+    </div>
+
+</h:body>
+</html>
