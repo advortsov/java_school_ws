@@ -6,11 +6,9 @@ package com.tsystems.javaschool.dto;
  * @since 26.03.2016
  */
 public class OrderLineDTO {
-//    private String name;
 
     private BookDTO bookDTO;
     private int count;
-
 
     public BookDTO getBookDTO() {
         return bookDTO;

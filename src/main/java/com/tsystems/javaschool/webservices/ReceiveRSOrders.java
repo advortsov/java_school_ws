@@ -33,7 +33,7 @@ public class ReceiveRSOrders {
         clientConfig.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
 
         Client client = Client.create(clientConfig);
-        client.addFilter(new LoggingFilter(System.out));
+//        client.addFilter(new LoggingFilter(System.out));
 
         WebResource webResource = client.resource(ORDERS_TARGET);
 
